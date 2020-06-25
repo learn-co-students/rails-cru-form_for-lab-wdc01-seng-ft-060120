@@ -1,0 +1,9 @@
+<h1><%= @genre.name %></h1>
+
+<p>Genre info</p>
+<h2>Songs</h2>
+<ul>
+    <% @genre.songs.each do |song| %>
+        <li><%= "Song Name: #{song.name} -- Song Artist: #{song.artist.name}" %></li>
+    <% end %>
+</ul>
