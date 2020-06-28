@@ -1,0 +1,16 @@
+<h1> 
+  <% @song.name %>
+</h1>
+
+<% g_id = @song.genre_id %>
+<% a_id = @song.artist_id %>
+<h4>
+  <ul>
+    <li>
+      <% link_to Genre.find(g_id), genre_path(g_id) %>
+    </li>
+    <li> 
+      <% link_to Artist.find(a_id), artist_path(a_id) %>
+    </li>
+  </ul>  
+</h4>
